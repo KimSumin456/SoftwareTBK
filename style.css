@@ -1,0 +1,55 @@
+body
+{
+    margin: 128px;
+    margin-top: 64px;
+}
+h1
+{
+    text-align: center;
+    color: red;
+    margin: 32px;
+    border-bottom: 1px solid gainsboro;
+    padding: 16px;
+}
+h2
+{
+    color: sienna;
+}
+p
+{
+    line-height: 32px;
+}
+#menu
+{
+    display: grid;
+    grid-template-columns: 256px 1fr;
+}
+#menu ol
+{
+    border-right: 1px solid gainsboro;
+}
+#menu ol li
+{
+    padding: 4px;
+}
+#menu div
+{
+    padding: 16px;
+}
+#menu h4
+{
+    color: rosybrown
+}
+@media( max-width: 800px )
+{
+    #menu
+    {
+        display: block;
+    }
+    #menu ol
+    {
+        border-right: none;
+        border-bottom: 1px solid gainsboro;
+        padding-bottom: 32px;
+    }
+}
