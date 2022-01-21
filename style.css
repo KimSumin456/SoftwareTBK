@@ -15,9 +15,17 @@ h2
 {
     color: sienna;
 }
+h4
+{
+    color: rosybrown
+}
 p
 {
     line-height: 32px;
+}
+.level
+{
+    font-weight: bold;
 }
 #menu
 {
@@ -26,19 +34,18 @@ p
 }
 #menu ol
 {
+    margin-top: 0px;
     border-right: 1px solid gainsboro;
+    padding-left: 0px;
 }
 #menu ol li
 {
+    list-style: none;
     padding: 4px;
 }
 #menu div
 {
-    padding: 16px;
-}
-#menu h4
-{
-    color: rosybrown
+    padding-left: 16px;
 }
 @media( max-width: 800px )
 {
