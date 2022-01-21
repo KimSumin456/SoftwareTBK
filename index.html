@@ -5,16 +5,17 @@
         <title>쏘프트웨어 떡볶이</title>
         <!--<style></style>-->
         <link rel="stylesheet" href="style.css">
+        <script src="index.js"></script>
     </head>
     <body>
         <h1>쏘프트웨어 떡볶이</h1>
         
         <h2>소프트웨어학과 메뉴판(전공과목)</h2>
-        <p>※ <span class="spicy">1</span>:착한맛 <span class="spicy">2</span>:초보맛 <span class="spicy">3</span>:덜매운맛 <span class="spicy">4</span>:오리지널</span> <span class="spicy">5</span>:매운맛</p>
+        <p>※ <span class="spicy">[1]:착한맛</span onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[2]:초보맛</span onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[3]:덜매운맛</span onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]:오리지널</span onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]:매운맛</span></p>
 
-        <div id="menu">
+        <div id="menuBoard">
             <h4>합계</h4>
-            <p id="total">합계 ...</p>
+            <p id="totalSpicy">합계 ...</p>
             
             <h4>내가 담은 메뉴</h4>
             <p id="selectedMenu">내가 담은 메뉴 ...</p>
@@ -22,57 +23,57 @@
             <ol>
                 <form>
                 <h4>메인메뉴(전공필수)</h4>
-                <li><input type="checkbox" name="lecture" value="SCE103"> <span class="level"> [3]</span> <span>컴퓨터프로그래밍및실습</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE141"> <span class="level"> [2]</span> <span>이산수학</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE192"> <span class="level"> [2]</span> <span>창의소프트웨어입문</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE112"> <span class="level"> [2]</span> <span>디지털회로</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE204"> <span class="level"> [4]</span> <span>객체지향프로그래밍및실습</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE205"> <span class="level"> [4]</span> <span>자료구조</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE212"> <span class="level"> [5]</span> <span>컴퓨터구조</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE231"> <span class="level"> [4]</span> <span>알고리즘</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE214"> <span class="level"> [5]</span> <span>시스템프로그래밍및실습</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE221"> <span class="level"> [4]</span> <span>컴퓨터네트워크</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE213"> <span class="level"> [5]</span> <span>운영체제</span></li>
+                <li><input type="checkbox" name="menu" value="SCE103" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[3]</span> <span>컴퓨터프로그래밍및실습</span></li>
+                <li><input type="checkbox" name="menu" value="SCE141" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[2]</span> <span>이산수학</span></li>
+                <li><input type="checkbox" name="menu" value="SCE192" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[2]</span> <span>창의소프트웨어입문</span></li>
+                <li><input type="checkbox" name="menu" value="SCE112" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[2]</span> <span>디지털회로</span></li>
+                <li><input type="checkbox" name="menu" value="SCE204" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>객체지향프로그래밍및실습</span></li>
+                <li><input type="checkbox" name="menu" value="SCE205" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>자료구조</span></li>
+                <li><input type="checkbox" name="menu" value="SCE212" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>컴퓨터구조</span></li>
+                <li><input type="checkbox" name="menu" value="SCE231" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>알고리즘</span></li>
+                <li><input type="checkbox" name="menu" value="SCE214" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>시스템프로그래밍및실습</span></li>
+                <li><input type="checkbox" name="menu" value="SCE221" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>컴퓨터네트워크</span></li>
+                <li><input type="checkbox" name="menu" value="SCE213" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>운영체제</span></li>
                 
                 <h4>사이드메뉴(전공선택)</h4>
-                <li><input type="checkbox" name="lecture" value="SOS344"> <span class="level"> [4]</span> <span>네트워크보안및실습</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE322"> <span class="level"> [4]</span> <span>컴퓨터통신</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE333"> <span class="level"> [5]</span> <span>데이터베이스</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE334"> <span class="level"> [2]</span> <span>정보보호</span></li>
-                <li><input type="checkbox" name="lecture" value="SOS337"> <span class="level"> [4]</span> <span>시스템소프트웨어보안</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE331"> <span class="level"> [2]</span> <span>오픈소스SW입문</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE3315"> <span class="level"> [4]</span> <span>기계학습</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE313"> <span class="level"> [4]</span> <span>컴파일러</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE3313"> <span class="level"> [4]</span> <span>데이터마이닝</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE392"> <span class="level"> [1]</span> <span>IT전문영어</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE393"> <span class="level"> [5]</span> <span>IT집중교육1</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE394"> <span class="level"> [5]</span> <span>IT집중교육2</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE395"> <span class="level"> [5]</span> <span>자기주도프로젝트</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE335"> <span class="level"> [4]</span> <span>계산이론</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE316"> <span class="level"> [4]</span> <span>사물인터넷시스템설계</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE337"> <span class="level"> [5]</span> <span>소프트웨어공학</span></li>
-                <li><input type="checkbox" name="lecture" value="SOS336"> <span class="level"> [5]</span> <span>소프트웨어응용보안및실습</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE338"> <span class="level"> [5]</span> <span>웹시스템설계</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE312"> <span class="level"> [4]</span> <span>임베디드소프트웨어</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE3310"> <span class="level"> [4]</span> <span>실전코딩1</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE3311"> <span class="level"> [4]</span> <span>실전코딩2</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE411"> <span class="level"> [4]</span> <span>모델링시뮬레이션</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE431"> <span class="level"> [4]</span> <span>컴퓨터비젼</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE492"> <span class="level"> [3]</span> <span>SW창업론</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE421"> <span class="level"> [4]</span> <span>모바일네트워크</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE433"> <span class="level"> [4]</span> <span>컴퓨터그래픽스</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE493"> <span class="level"> [5]</span> <span>자기주도연구1</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE435"> <span class="level"> [4]</span> <span>분산시스템</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE491"> <span class="level"> [5]</span> <span>SW캡스톤디자인</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE391"> <span class="level"> [1]</span> <span>SW산업세미나</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE411"> <span class="level"> [5]</span> <span>고급컴퓨터구조</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE432"> <span class="level"> [4]</span> <span>인공지능</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE495"> <span class="level"> [5]</span> <span>SW현장실습1</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE499"> <span class="level"> [5]</span> <span>창업실습1</span></li>
-                <li><input type="checkbox" name="lecture" value="SCE4911"> <span class="level"> [5]</span> <span>창업현장실습1</span></li>
-                <li><input type="checkbox" name="lecture" value="INF0401"> <span class="level"> [5]</span> <span>해외인턴십1</span></li>
+                <li><input type="checkbox" name="menu" value="SOS344" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>네트워크보안및실습</span></li>
+                <li><input type="checkbox" name="menu" value="SCE322" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>컴퓨터통신</span></li>
+                <li><input type="checkbox" name="menu" value="SCE333" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>데이터베이스</span></li>
+                <li><input type="checkbox" name="menu" value="SCE334" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[2]</span> <span>정보보호</span></li>
+                <li><input type="checkbox" name="menu" value="SOS337" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>시스템소프트웨어보안</span></li>
+                <li><input type="checkbox" name="menu" value="SCE331" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[2]</span> <span>오픈소스SW입문</span></li>
+                <li><input type="checkbox" name="menu" value="SCE3315" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>기계학습</span></li>
+                <li><input type="checkbox" name="menu" value="SCE313" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>컴파일러</span></li>
+                <li><input type="checkbox" name="menu" value="SCE3313" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>데이터마이닝</span></li>
+                <li><input type="checkbox" name="menu" value="SCE392" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[1]</span> <span>IT전문영어</span></li>
+                <li><input type="checkbox" name="menu" value="SCE393" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>IT집중교육1</span></li>
+                <li><input type="checkbox" name="menu" value="SCE394" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>IT집중교육2</span></li>
+                <li><input type="checkbox" name="menu" value="SCE395" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>자기주도프로젝트</span></li>
+                <li><input type="checkbox" name="menu" value="SCE335" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>계산이론</span></li>
+                <li><input type="checkbox" name="menu" value="SCE316" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>사물인터넷시스템설계</span></li>
+                <li><input type="checkbox" name="menu" value="SCE337" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>소프트웨어공학</span></li>
+                <li><input type="checkbox" name="menu" value="SOS336" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>소프트웨어응용보안및실습</span></li>
+                <li><input type="checkbox" name="menu" value="SCE338" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>웹시스템설계</span></li>
+                <li><input type="checkbox" name="menu" value="SCE312" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>임베디드소프트웨어</span></li>
+                <li><input type="checkbox" name="menu" value="SCE3310" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>실전코딩1</span></li>
+                <li><input type="checkbox" name="menu" value="SCE3311" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>실전코딩2</span></li>
+                <li><input type="checkbox" name="menu" value="SCE411" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>모델링시뮬레이션</span></li>
+                <li><input type="checkbox" name="menu" value="SCE431" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>컴퓨터비젼</span></li>
+                <li><input type="checkbox" name="menu" value="SCE492" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[3]</span> <span>SW창업론</span></li>
+                <li><input type="checkbox" name="menu" value="SCE421" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>모바일네트워크</span></li>
+                <li><input type="checkbox" name="menu" value="SCE433" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>컴퓨터그래픽스</span></li>
+                <li><input type="checkbox" name="menu" value="SCE493" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>자기주도연구1</span></li>
+                <li><input type="checkbox" name="menu" value="SCE435" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>분산시스템</span></li>
+                <li><input type="checkbox" name="menu" value="SCE491" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>SW캡스톤디자인</span></li>
+                <li><input type="checkbox" name="menu" value="SCE391" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[1]</span> <span>SW산업세미나</span></li>
+                <li><input type="checkbox" name="menu" value="SCE411" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>고급컴퓨터구조</span></li>
+                <li><input type="checkbox" name="menu" value="SCE432" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[4]</span> <span>인공지능</span></li>
+                <li><input type="checkbox" name="menu" value="SCE495" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>SW현장실습1</span></li>
+                <li><input type="checkbox" name="menu" value="SCE499" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>창업실습1</span></li>
+                <li><input type="checkbox" name="menu" value="SCE4911" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>창업현장실습1</span></li>
+                <li><input type="checkbox" name="menu" value="INF0401" onclick=menuBoard.onSelectMenu(this)> <span class="spicy">[5]</span> <span>해외인턴십1</span></li>
                 </form>
-                <script src="index.js"></script>
+                <script>showSpicyColor()</script>
             </ol>
             <div>
                <h4>과목개요</h4>

@@ -23,37 +23,37 @@ p
 {
     line-height: 32px;
 }
-.level
+.spicy
 {
     font-weight: bold;
 }
-#menu
+#menuBoard
 {
     display: grid;
     grid-template-columns: 256px 1fr;
 }
-#menu ol
+#menuBoard ol
 {
     margin-top: 0px;
     border-right: 1px solid gainsboro;
     padding-left: 0px;
 }
-#menu ol li
+#menuBoard ol li
 {
     list-style: none;
     padding: 4px;
 }
-#menu div
+#menuBoard div
 {
     padding-left: 16px;
 }
 @media( max-width: 800px )
 {
-    #menu
+    #menuBoard
     {
         display: block;
     }
-    #menu ol
+    #menuBoard ol
     {
         border-right: none;
         border-bottom: 1px solid gainsboro;
