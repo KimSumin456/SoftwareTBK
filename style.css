@@ -23,32 +23,45 @@ p
 {
     line-height: 32px;
 }
+
 .spicy
 {
     font-weight: bold;
 }
-#menuBoard
+
+#receipt, #menuBoard
 {
     display: grid;
     grid-template-columns: 256px 1fr;
+    grid-gap: 4px;
+}
+#receipt
+{
+    border: 2px dotted gainsboro;
+}
+#receipt div, #menuBoard div
+{
+    padding-left: 8px;
 }
 #menuBoard ol
 {
-    margin-top: 0px;
+    list-style: none;
     border-right: 1px solid gainsboro;
-    padding-left: 0px;
+    padding-left: 0px;    
 }
 #menuBoard ol li
 {
-    list-style: none;
-    padding: 4px;
+    padding-top: 8px;
 }
-#menuBoard div
-{
-    padding-left: 16px;
-}
+
+
 @media( max-width: 800px )
 {
+    #receipt
+    {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
     #menuBoard
     {
         display: block;

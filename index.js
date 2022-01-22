@@ -18,12 +18,15 @@ var menuBoard =
     onSelectMenu: function(self) {
         if (self.checked)
         {
+            this.totalSpicy += Number(self.nextElementSibling.innerText[1]);
             this.selectedMenu[self.value] = self.nextElementSibling.innerText + self.nextElementSibling.nextElementSibling.innerText + " ";
         }
         else
         {
+            this.totalSpicy -= Number(self.nextElementSibling.innerText[1]);
             delete this.selectedMenu[self.value];
         }
+        document.getElementById("totalSpicy").innerText = this.totalSpicy;
         
         var selectedMenuString = "";
         for (var key in this.selectedMenu)
@@ -31,7 +34,5 @@ var menuBoard =
             selectedMenuString += this.selectedMenu[key];
         }
         document.getElementById("selectedMenu").innerText = selectedMenuString;
-        
-        console.log(this.selectedMenu);
     }
 }
