@@ -2,14 +2,19 @@ body
 {
     margin: 128px;
     margin-top: 64px;
+    color: white;
+    background-color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("tbk.png");
+    background-repeat: no-repeat;
+    background-position: 512px 512px;
 }
 h1
 {
-    text-align: center;
-    color: red;
     margin: 32px;
     border-bottom: 1px solid gainsboro;
     padding: 16px;
+    text-align: center;
+    color: red;
 }
 h2
 {
@@ -45,9 +50,9 @@ p
 }
 #menuBoard ol
 {
-    list-style: none;
     border-right: 1px solid gainsboro;
-    padding-left: 0px;    
+    padding-left: 0px;
+    list-style: none;
 }
 #menuBoard ol li
 {
@@ -57,6 +62,14 @@ p
 
 @media( max-width: 800px )
 {
+    body
+    {
+        margin: 128px;
+        margin-top: 64px;
+        color: white;
+        background-color: black;
+        background-image: none;
+    }
     #receipt
     {
         display: grid;
